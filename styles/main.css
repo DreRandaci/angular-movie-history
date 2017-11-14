@@ -1,5 +1,12 @@
 body {
-  background-color: blue; }
+  background-color: #008cff; }
 
 h1 {
   color: white; }
+
+.half_size {
+  width: 30%;
+  height: 30%; }
+
+.half_size img {
+  width: 100%; }
