@@ -9,3 +9,6 @@ h1 {
 
 .half_size img {
   width: 100%; }
+
+.fix_top {
+  top: 0px; }
