@@ -1,6 +1,5 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top" ng-controller="NavCtrl">
         <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
@@ -9,9 +8,8 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">Movie History</a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
+          </div>    
+
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                                        
             <ul class="nav navbar-nav navbar-right" ng-show="!uid">
               <li><a ng-href="#!/auth">Authentication</a></li>        
@@ -20,7 +18,7 @@
                 <li><a ng-href="#!/search">Search</a></li>
                 <li><a ng-href="#!/wishlist">Wishlist</a></li>
                 <li><a ng-href="#!/rated">Rated</a></li>
-                <li><a ng-href="#!/logout">Logout</a></li>
+                <li><a ng-click="logoutUser()">Logout</a></li>
               </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
