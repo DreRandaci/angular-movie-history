@@ -25,11 +25,20 @@ app.controller('SearchCtrl', function( $location, $rootScope, $scope, MovieServi
 
     $scope.saveRated = (movie) => {        
         let newMovie = createMovie(movie);
-        MovieService.postNewMovie(newMovie).then((results) => {
+        MovieService.postNewMovie(newMovie).then(() => {
             $location.path("/rated");
         }).catch((err) => {
             console.log('error in postNewMovie:', err);
         });
     };
 
+    $scope.saveWishlist = (movie) => {        
+        let newMovie = createMovie(movie);
+        newMovie.isWatched = false;
+        MovieService.postNewMovie(newMovie).then(() => {
+            $location.path("/wishlist");
+        }).catch((err) => {
+            console.log('error in postNewMovie:', err);
+        });
+    };
 });
