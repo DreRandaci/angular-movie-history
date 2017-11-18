@@ -60,5 +60,9 @@ app.service("MovieService", function( $http, $q, FIREBASE_CONFIG ){
         };
     };
 
-    return { getRatedMovies, postNewMovie, deleteMovie, getWishlistMovies, updateMovie, createMovieObj };
+    const getSingleMovie = (movieId) => {
+        return $http.get(`${FIREBASE_CONFIG.databaseURL}/movies/${movieId}.json`);
+    };
+
+    return { getRatedMovies, postNewMovie, deleteMovie, getWishlistMovies, updateMovie, createMovieObj, getSingleMovie };
 });
